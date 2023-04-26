@@ -7,7 +7,7 @@ const precoEtanol = 3.50;
 const precoGasosa = 5;
 const gastoMedioEtanol = 10;
 const gastoMedioGasolina = 12;
-const distanciaKm = 800;
+const distanciaKm = 1000;
 
 let gastoFinal
                 switch (tipoDeCombustivel) {
