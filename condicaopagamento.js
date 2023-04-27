@@ -1,10 +1,19 @@
+// Código Condição de pagamento:
+// - À vista Débito, recebe 10% de desconto;
+// - À vista no Dinheiro ou PIX, recebe 15% de desconto;
+// - Em duas vezes, preço normal de etiqueta sem juros;
+// - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+
+
+const { normalize } = require('path');
+
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout,
 })
 
 const precoEtiqueta = 100.00;
-const prazoMeses = 5
+const prazoMeses = 5;
 
 readline.question('Qual será a forma de pagamento? ', formaDePagamento  => {
     readline.close()
