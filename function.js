@@ -40,22 +40,22 @@
 // console.log (idade)
 
 function descontoAplicado(precoEtiqueta, desconto){
-    return precoEtiqueta - (precoEtiqueta * desconto);
+    return precoEtiqueta - (precoEtiqueta * (desconto/100));
 }
 
 function jurosAplicado(precoEtiqueta, juros){
-    return precoEtiqueta + (precoEtiqueta * juros);
+    return precoEtiqueta + (precoEtiqueta * (juros/100));
 }
 
 function precoFinal (formaDePagamento){
     if (formaDePagamento === 1) {
-        console.log (descontoAplicado(100, 0.1));
+        console.log (descontoAplicado(100, 10));
     } else if (formaDePagamento === 2) {
-        console.log(descontoAplicado(100, 0.15));
+        console.log(descontoAplicado(100, 15));
     } else if (formaDePagamento === 3) {
         console.log(precoEtiqueta);
     } else if (formaDePagamento === 4){
-        console.log(jurosAplicado(100, 0.1));
+        console.log(jurosAplicado(100, 10));
     }
 }
 
