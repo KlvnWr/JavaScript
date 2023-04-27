@@ -23,18 +23,40 @@
 //     console.log(classificarimc(imc));
 // })();
 
-function nomear(name){
-    return 'Meu nome é ' + name;
+// function nomear(name){
+//     return 'Meu nome é ' + name;
+// }
+
+// function escreverIdade (age){
+//     if (age >= 18){
+//         console.log (nomear('Kelvin\n') + 'Você é de maior');
+//     } else {
+//         return('Você ainda não pode beber\n' + (nomear('Larissa, amor de kelvin')));
+//     }
+// }
+
+// escreverIdade (18);
+// const idade = escreverIdade(18);
+// console.log (idade)
+
+function descontoAplicado(precoEtiqueta, desconto){
+    return precoEtiqueta - (precoEtiqueta * desconto);
 }
 
-function escreverIdade (age){
-    if (age >= 18){
-        console.log (nomear('Kelvin\n') + 'Você é de maior');
-    } else {
-        return('Você ainda não pode beber\n' + (nomear('Larissa, amor de kelvin')));
+function jurosAplicado(precoEtiqueta, juros){
+    return precoEtiqueta + (precoEtiqueta * juros);
+}
+
+function precoFinal (formaDePagamento){
+    if (formaDePagamento === 1) {
+        console.log (descontoAplicado(100, 0.1));
+    } else if (formaDePagamento === 2) {
+        console.log(descontoAplicado(100, 0.15));
+    } else if (formaDePagamento === 3) {
+        console.log(precoEtiqueta);
+    } else if (formaDePagamento === 4){
+        console.log(jurosAplicado(100, 0.1));
     }
 }
 
-escreverIdade (18);
-const idade = escreverIdade(18);
-console.log (idade)
+precoFinal (1)

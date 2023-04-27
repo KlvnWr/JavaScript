@@ -1,10 +1,3 @@
-// Código Condição de pagamento:
-// - À vista Débito, recebe 10% de desconto;
-// - À vista no Dinheiro ou PIX, recebe 15% de desconto;
-// - Em duas vezes, preço normal de etiqueta sem juros;
-// - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
-
-
 const { normalize } = require('path');
 
 const readline = require('readline').createInterface({
@@ -34,3 +27,34 @@ readline.question('Qual será a forma de pagamento? ', formaDePagamento  => {
             console.log ('O preço parcelado em %d meses será R$%d cada.',prazoMeses, precoFinal) 
     }
 })
+
+
+
+// Código Condição de pagamento:
+// - À vista Débito, recebe 10% de desconto;
+// - À vista no Dinheiro ou PIX, recebe 15% de desconto;
+// - Em duas vezes, preço normal de etiqueta sem juros;
+// - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+
+
+// function descontoAplicado(precoEtiqueta, desconto){
+//     return precoEtiqueta - (precoEtiqueta * desconto);
+// }
+
+// function jurosAplicado(precoEtiqueta, juros){
+//     return precoEtiqueta + (precoEtiqueta * juros);
+// }
+
+// function precoFinal (formaDePagamento){
+//     if (formaDePagamento === 1) {
+//         console.log (descontoAplicado(100, 0.1));
+//     } else if (formaDePagamento === 2) {
+//         console.log(descontoAplicado(100, 0.15));
+//     } else if (formaDePagamento === 3) {
+//         console.log(precoEtiqueta);
+//     } else if (formaDePagamento === 4){
+//         console.log(jurosAplicado(100, 0.1));
+//     }
+// }
+
+// precoFinal (1)
