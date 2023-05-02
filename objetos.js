@@ -11,21 +11,71 @@
 
 
 
-class Carros 
-{
-    marca;
-    cor;
-    consumoMedioPorKm;
+// class Carros 
+// {
+//     marca;
+//     cor;
+//     consumoMedioPorKm;
 
-    constructor (marca, cor, consumoMedioPorKm) {
-        this.marca = marca
-        this.cor = cor
-        this.consumoMedioPorKm = consumoMedioPorKm
+//     constructor (marca, cor, consumoMedioPorKm) {
+//         this.marca = marca;
+//         this.cor = cor;
+//         this.consumoMedioPorKm = consumoMedioPorKm;
+//     }
+
+//     calcularGastoDaViagem(distancia, precoCombustivelLitro){
+//        return (distancia / this.consumoMedioPorKm) * precoCombustivelLitro;
+//     }
+// }
+
+// const cruze = new Carros('Chevrolet', 'Preto', 11);
+// const polo = new Carros('Volkswagen', 'Branco', 15);
+
+// console.log(cruze);
+// console.log(cruze.calcularGastoDaViagem (800, 5));
+
+// console.log(polo);
+// console.log(polo.calcularGastoDaViagem(800, 5))
+
+class Pessoas 
+{
+    nome;
+    peso;
+    altura;
+
+    constructor (nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    calculoDeImc () {
+        return this.peso / (this.altura * this.altura);
+    }
+
+    classificarImc () {
+        const imc = this.calculoDeImc();
+        if (imc < 18.5) {
+        return ('Você está muito magrelo pqp')
+        } else if (imc >= 18.5 && imc <= 25) {
+        return ('Você está bem normalzin')
+        } else if (imc > 25 && imc < 30) {
+        return ('Você está começando a fica pesadin, mas é o famoso gordin gostoso')
+        } else if (imc >= 30 && imc <= 40) {
+        return ('Tá obeso cacete, vai dar uma caminhadinha')
+        } else if (imc > 40) {
+        return ('Tá GORDO PRA KRL, Thais carla você?')
+        }
     }
 }
 
-const cruze = new Carros('Chevrolet', 'Preto', 1/11)
-const polo = new Carros('Volkswagen', 'Branco', 1/15)
-const combustivel = 
+const José = new Pessoas ('José', 70, 1.75)
+const Kelvin = new Pessoas ('Kelvin', 64, 1.72)
 
-console.log (polo)
+console.log(José)
+console.log(José.calculoDeImc())
+console.log(José.classificarImc())
+
+console.log(Kelvin)
+console.log(Kelvin.calculoDeImc())
+console.log(Kelvin.classificarImc())
