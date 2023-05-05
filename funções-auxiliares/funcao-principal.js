@@ -1,15 +1,21 @@
 const {
-    gets,
+    entrada,
     print
 } = require('./funcao-auxiliar');
 
-const numerosorteados = gets();
+const numerosorteados = entrada;
 let maiorNumero = 0;
 
-for (let i = 0; i < numerosorteados; i++) {
-    const numeroSorteios = gets();
-    if (numeroSorteios > maiorNumero) {
-        maiorNumero = numeroSorteios
+// for (let i = 0; i < numerosorteados.length ; i++) {
+//     const numeroSorteado = entrada[i];
+//     if (numeroSorteado > maiorNumero) {
+//         maiorNumero = numeroSorteado;
+//     }
+// }
+
+for(const numeroSorteado of entrada) {
+    if (numeroSorteado > maiorNumero) {
+     maiorNumero = numeroSorteado;
     }
 }
 
