@@ -1,3 +1,16 @@
-const funcoes = require('./funcao-auxiliar');
+const {
+    gets,
+    print
+} = require('./funcao-auxiliar');
 
-console.log(funcoes)
+const numerosorteados = gets();
+let maiorNumero = 0;
+
+for (let i = 0; i < numerosorteados; i++) {
+    const numeroSorteios = gets();
+    if (numeroSorteios > maiorNumero) {
+        maiorNumero = numeroSorteios
+    }
+}
+
+print(maiorNumero)
